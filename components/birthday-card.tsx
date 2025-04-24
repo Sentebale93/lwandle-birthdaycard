@@ -49,7 +49,7 @@ export default function BirthdayCard() {
       {showConfetti && <Confetti />}
       <div className="max-w-4xl w-full mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold text-blue-500 mb-2">{babyName}'s 1st Birthday!</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-500 mb-2">{babyName}&apos;s 1st Birthday!</h1>
           <p className="text-xl text-gray-600">A year of wonderful memories</p>
         </div>
 
@@ -81,7 +81,7 @@ export default function BirthdayCard() {
                 startIndex: currentMonth - 1,
               }}
               onSelect={(index) => {
-                setCurrentMonth(index + 1)
+                setCurrentMonth(Number(index) + 1)
                 if (isAutoPlaying) setIsAutoPlaying(false)
               }}
             >
@@ -150,7 +150,7 @@ export default function BirthdayCard() {
 
             <div className="mt-6 text-center">
               <p className="text-lg text-gray-700 italic">
-                "From tiny fingers to first steps, what an amazing journey it's been!"
+                &quot;From tiny fingers to first steps, what an amazing journey it&apos;s been!&quot;
               </p>
               <div className="mt-4 flex justify-center gap-4">
                 <Button

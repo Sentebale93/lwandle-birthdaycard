@@ -54,7 +54,7 @@ export default function AudioPlayer() {
         }
       }
     }
-  }, [])
+  }, [volume])
 
   // Listen for the custom event from the birthday card
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function AudioPlayer() {
     return () => {
       window.removeEventListener("toggleBirthdayMusic", handleToggleMusic)
     }
-  }, [isPlaying])
+  }, [togglePlay])
 
   return (
     <div
